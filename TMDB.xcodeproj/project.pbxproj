@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		15A00BA62406F8B400F7AB63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BA52406F8B400F7AB63 /* ViewController.swift */; };
 		15A00BAB2406F8B500F7AB63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A00BAA2406F8B500F7AB63 /* Assets.xcassets */; };
 		15A00BAE2406F8B500F7AB63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A00BAC2406F8B500F7AB63 /* LaunchScreen.storyboard */; };
+		15A00BB92406FB1C00F7AB63 /* CoordinatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 15A00BB82406FB1C00F7AB63 /* CoordinatorKit */; };
+		15A00BBC2406FB5A00F7AB63 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BBB2406FB5A00F7AB63 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,7 @@
 		15A00BAA2406F8B500F7AB63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15A00BAD2406F8B500F7AB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15A00BAF2406F8B500F7AB63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15A00BBB2406FB5A00F7AB63 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A00BB92406FB1C00F7AB63 /* CoordinatorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +60,7 @@
 			children = (
 				15A00BA12406F8B400F7AB63 /* AppDelegate.swift */,
 				15A00BA32406F8B400F7AB63 /* SceneDelegate.swift */,
+				15A00BBA2406FB4300F7AB63 /* Coordinator */,
 				15A00BB52406F8CD00F7AB63 /* Controllers */,
 				15A00BB62406F8E400F7AB63 /* Resource */,
 			);
@@ -80,6 +85,14 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		15A00BBA2406FB4300F7AB63 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				15A00BBB2406FB5A00F7AB63 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,6 +109,9 @@
 			dependencies = (
 			);
 			name = TMDB;
+			packageProductDependencies = (
+				15A00BB82406FB1C00F7AB63 /* CoordinatorKit */,
+			);
 			productName = TMDB;
 			productReference = 15A00B9E2406F8B400F7AB63 /* TMDB.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 15A00B952406F8B400F7AB63;
+			packageReferences = (
+				15A00BB72406FB1C00F7AB63 /* XCRemoteSwiftPackageReference "CoordinatorKit" */,
+			);
 			productRefGroup = 15A00B9F2406F8B400F7AB63 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -150,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A00BBC2406FB5A00F7AB63 /* AppCoordinator.swift in Sources */,
 				15A00BA62406F8B400F7AB63 /* ViewController.swift in Sources */,
 				15A00BA22406F8B400F7AB63 /* AppDelegate.swift in Sources */,
 				15A00BA42406F8B400F7AB63 /* SceneDelegate.swift in Sources */,
@@ -342,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15A00BB72406FB1C00F7AB63 /* XCRemoteSwiftPackageReference "CoordinatorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bfernandesbfs/CoordinatorKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15A00BB82406FB1C00F7AB63 /* CoordinatorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15A00BB72406FB1C00F7AB63 /* XCRemoteSwiftPackageReference "CoordinatorKit" */;
+			productName = CoordinatorKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15A00B962406F8B400F7AB63 /* Project object */;
 }

@@ -7,20 +7,28 @@
 //
 
 import UIKit
+import CoordinatorKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var coordinator: AppCoordinator
+
+    override init() {
+        coordinator = AppCoordinator()
+        super.init()
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else {
             return
         }
 
-        window = UIWindow(windowScene: scene)
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
+        let window = UIWindow(windowScene: scene)
 
+        self.coordinator.setRoot(for: window)
+        self.coordinator.initialize()
+        self.window = window
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
