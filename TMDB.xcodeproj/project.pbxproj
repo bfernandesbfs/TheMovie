@@ -14,6 +14,15 @@
 		15A00BAE2406F8B500F7AB63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A00BAC2406F8B500F7AB63 /* LaunchScreen.storyboard */; };
 		15A00BB92406FB1C00F7AB63 /* CoordinatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 15A00BB82406FB1C00F7AB63 /* CoordinatorKit */; };
 		15A00BBC2406FB5A00F7AB63 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BBB2406FB5A00F7AB63 /* AppCoordinator.swift */; };
+		15A00BC02406FF7500F7AB63 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BBF2406FF7500F7AB63 /* NetworkService.swift */; };
+		15A00BC32406FFA500F7AB63 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BC22406FFA500F7AB63 /* NetworkServiceProtocol.swift */; };
+		15A00BC52406FFE700F7AB63 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BC42406FFE700F7AB63 /* Resource.swift */; };
+		15A00BC72407003200F7AB63 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BC62407003200F7AB63 /* NetworkError.swift */; };
+		15A00BCA240700E700F7AB63 /* Publisher+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BC9240700E700F7AB63 /* Publisher+Utils.swift */; };
+		15A00BCD2407062200F7AB63 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BCC2407062200F7AB63 /* Constants.swift */; };
+		15A00BCF2407079C00F7AB63 /* NetworkRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BCE2407079C00F7AB63 /* NetworkRouterProtocol.swift */; };
+		15A00BD324073F7B00F7AB63 /* MoviesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BD224073F7B00F7AB63 /* MoviesRouter.swift */; };
+		15A00BD82407430D00F7AB63 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00BD72407430D00F7AB63 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +34,15 @@
 		15A00BAD2406F8B500F7AB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15A00BAF2406F8B500F7AB63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A00BBB2406FB5A00F7AB63 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		15A00BBF2406FF7500F7AB63 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		15A00BC22406FFA500F7AB63 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		15A00BC42406FFE700F7AB63 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		15A00BC62407003200F7AB63 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		15A00BC9240700E700F7AB63 /* Publisher+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Utils.swift"; sourceTree = "<group>"; };
+		15A00BCC2407062200F7AB63 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		15A00BCE2407079C00F7AB63 /* NetworkRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouterProtocol.swift; sourceTree = "<group>"; };
+		15A00BD224073F7B00F7AB63 /* MoviesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouter.swift; sourceTree = "<group>"; };
+		15A00BD72407430D00F7AB63 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,19 +78,23 @@
 			children = (
 				15A00BA12406F8B400F7AB63 /* AppDelegate.swift */,
 				15A00BA32406F8B400F7AB63 /* SceneDelegate.swift */,
+				15A00BBD2406FCD800F7AB63 /* Network */,
+				15A00BCB2407060800F7AB63 /* Constants */,
 				15A00BBA2406FB4300F7AB63 /* Coordinator */,
-				15A00BB52406F8CD00F7AB63 /* Controllers */,
+				15A00BB52406F8CD00F7AB63 /* Feature */,
 				15A00BB62406F8E400F7AB63 /* Resource */,
 			);
 			path = TMDB;
 			sourceTree = "<group>";
 		};
-		15A00BB52406F8CD00F7AB63 /* Controllers */ = {
+		15A00BB52406F8CD00F7AB63 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				15A00BD024073F3F00F7AB63 /* Service */,
 				15A00BA52406F8B400F7AB63 /* ViewController.swift */,
+				15A00BD4240741C300F7AB63 /* Controller */,
 			);
-			path = Controllers;
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		15A00BB62406F8E400F7AB63 /* Resource */ = {
@@ -91,6 +113,91 @@
 				15A00BBB2406FB5A00F7AB63 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		15A00BBD2406FCD800F7AB63 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				15A00BC12406FF9200F7AB63 /* Protocol */,
+				15A00BBE2406FCF400F7AB63 /* Core */,
+				15A00BC8240700DD00F7AB63 /* Helper */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		15A00BBE2406FCF400F7AB63 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				15A00BBF2406FF7500F7AB63 /* NetworkService.swift */,
+				15A00BC62407003200F7AB63 /* NetworkError.swift */,
+				15A00BC42406FFE700F7AB63 /* Resource.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		15A00BC12406FF9200F7AB63 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				15A00BC22406FFA500F7AB63 /* NetworkServiceProtocol.swift */,
+				15A00BCE2407079C00F7AB63 /* NetworkRouterProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		15A00BC8240700DD00F7AB63 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				15A00BC9240700E700F7AB63 /* Publisher+Utils.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		15A00BCB2407060800F7AB63 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				15A00BCC2407062200F7AB63 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		15A00BD024073F3F00F7AB63 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				15A00BD124073F5300F7AB63 /* Router */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		15A00BD124073F5300F7AB63 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				15A00BD224073F7B00F7AB63 /* MoviesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		15A00BD4240741C300F7AB63 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15A00BD62407428F00F7AB63 /* Search */,
+				15A00BD52407424D00F7AB63 /* Detail */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15A00BD52407424D00F7AB63 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				15A00BD72407430D00F7AB63 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		15A00BD62407428F00F7AB63 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,10 +276,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A00BD82407430D00F7AB63 /* DetailViewController.swift in Sources */,
+				15A00BC02406FF7500F7AB63 /* NetworkService.swift in Sources */,
+				15A00BC72407003200F7AB63 /* NetworkError.swift in Sources */,
 				15A00BBC2406FB5A00F7AB63 /* AppCoordinator.swift in Sources */,
+				15A00BC32406FFA500F7AB63 /* NetworkServiceProtocol.swift in Sources */,
+				15A00BD324073F7B00F7AB63 /* MoviesRouter.swift in Sources */,
+				15A00BCA240700E700F7AB63 /* Publisher+Utils.swift in Sources */,
+				15A00BCD2407062200F7AB63 /* Constants.swift in Sources */,
 				15A00BA62406F8B400F7AB63 /* ViewController.swift in Sources */,
 				15A00BA22406F8B400F7AB63 /* AppDelegate.swift in Sources */,
 				15A00BA42406F8B400F7AB63 /* SceneDelegate.swift in Sources */,
+				15A00BC52406FFE700F7AB63 /* Resource.swift in Sources */,
+				15A00BCF2407079C00F7AB63 /* NetworkRouterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
